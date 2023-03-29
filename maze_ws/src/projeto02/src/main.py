@@ -1,13 +1,15 @@
 #! shebang
 
 import rospy
+from nav_msgs.msg import Odometry
+from sensor_msgs.msg import LaserScan
 
 class myRobot():
 
     def __init__(self):
         print('init')
-        # Subscriber odometria
-        # Subscriber laser
+        self.sub_od = rospy.Subscriber('/mobile_base_controller/odom', Odometry, self.callback_odometria, queue_size=1)
+        self.sub_laser = rospy.Subscriber('/scan_raw', LaserScan, self.callback_laser, queue_size=1)
         # Client Service camera
         # Publisher base
         # Publisher cabeca
