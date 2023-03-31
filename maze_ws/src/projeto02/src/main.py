@@ -10,6 +10,8 @@ from tf.transformations import euler_from_quaternion, quaternion_from_euler
 
 class myRobot():
 
+    distance = 1.2
+
     def __init__(self):
         print('init')
         self.sub_od = rospy.Subscriber('/mobile_base_controller/odom', Odometry, self.callback_odometria, queue_size=1)
@@ -18,16 +20,16 @@ class myRobot():
         self.n_laser = None
         # Client Service camera
         self.base_pub = rospy.Publisher('/nav_vel', Twist, queue_size=1)
-        self.orientation = 0
+        self.orientation = None
         # Publisher cabeca
 
     def callback_odometria(self, msg: Odometry):
         # print('callback odometria')
         # Armazenar os dados de odometria
         q = msg.pose.pose.orientation
-        self.orientation = euler_from_quaternion([q.x, q.y, q.z, q.w])[-1]
-        print(self.orientation)
-        pass
+        self.orientation = round(euler_from_quaternion([q.x, q.y, q.z, q.w])[-1], 2)
+        # print(self.orientation)
+        # pass
         
 
     def callback_laser(self, msg: LaserScan):
@@ -40,7 +42,8 @@ class myRobot():
     def move_straight(self):
         print('move straight')
         move = Twist()
-        move.linear.x = 5
+        dist_min_central = min(self.laser_ranges[222:-222])
+        move.linear.x = 5 * (dist_min_central - 1)
         self.base_pub.publish(move)
         
     def stop(self):
@@ -50,15 +53,23 @@ class myRobot():
     def turn(self, angle):
         print('turn')
         self.stop()
-        inital_ori = self.orientation % pi
+        while self.orientation is None:
+            pass
+        initial_ori = self.orientation
         move = Twist()
-        while abs((self.orientation % pi) - inital_ori) < pi/2:
-            move.angular.z = 0.2
+        diff = min(abs(self.orientation - initial_ori), (self.orientation - initial_ori)%pi)
+        print(diff)
+        while diff < pi/2 - 0.02:
+            move.angular.z = (abs(angle) - diff) * (angle//abs(angle))
             self.base_pub.publish(move)
-        print('-'*30)
+            diff = min(abs(self.orientation - initial_ori), (self.orientation - initial_ori)%pi)
+            print(diff)
         
     def turn_right(self):
-        self.turn(pi)
+        self.turn(-pi/2)
+        
+    def turn_left(self):
+        self.turn(pi/2)
         
     def decision(self):
         print('decision')
@@ -68,16 +79,18 @@ class myRobot():
         side = self.n_laser // 3
         
         right = min(self.laser_ranges[:side])
-        # straight = min(self.laser_ranges[side:-side])
+        straight = min(self.laser_ranges[side:-side])
         left = min(self.laser_ranges[-side:])
-        
-        if right < 1.5 and left < 1.5:
+        # print('-'*30)
+        # print(left)
+        # print(right)
+        if (right < self.distance and left < self.distance) or straight > self.distance:
             return 2  # Andar pra frente
-        elif right >= 1.5 and left >= 1.5:
+        elif right >= self.distance and left >= self.distance:
             return 1  # Tirar fotos
-        elif left >= 1.5:
+        elif left >= self.distance:
             return 3  # Virar para esquerda
-        elif right >= 1.5:
+        elif right >= self.distance:
             return 4  # Virar para direita
         else:
             return 0
@@ -108,18 +121,11 @@ if __name__ == '__main__':
             #compute next state
         elif state == 4:
             tiago.turn_right()
-            sleep(10)
-            print('='*30)
-            print(mean(tiago.laser_ranges[:222]))
-            print('='*30)
-            print(mean(tiago.laser_ranges[222:-222]))
-            print('='*30)
-            print(mean(tiago.laser_ranges[-222:]))
             #compute next state
 
         state = tiago.decision()
         
-        tiago.turn(pi/2)
-        break
+        # tiago.turn(pi/2)
+        # break
         print(state)
         rate.sleep()
