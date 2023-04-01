@@ -54,11 +54,13 @@ CMAKE_BINARY_DIR = /home/bctat/TIAGo-maze-2/maze_ws/build
 
 # The main recursive "all" target.
 all: gtest/all
+all: projeto_02/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
+preinstall: projeto_02/preinstall
 
 .PHONY : preinstall
 
@@ -69,6 +71,7 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
+clean: projeto_02/clean
 
 .PHONY : clean
 
@@ -128,6 +131,40 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest_main.dir/clean
 gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : gtest/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory projeto_02
+
+# Recursive "all" directory target.
+projeto_02/all: projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all
+
+.PHONY : projeto_02/all
+
+# Recursive "preinstall" directory target.
+projeto_02/preinstall:
+
+.PHONY : projeto_02/preinstall
+
+# Recursive "clean" directory target.
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_gennodejs.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_genpy.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_gencpp.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_generate_messages.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_geneus.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/clean
+projeto_02/clean: projeto_02/CMakeFiles/projeto_02_genlisp.dir/clean
+
+.PHONY : projeto_02/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -372,6 +409,474 @@ gtest: gtest/googletest/CMakeFiles/gtest.dir/rule
 gtest/googletest/CMakeFiles/gtest.dir/clean:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/all: projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/all: projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num=14,15 "Built target projeto_02_generate_messages_py"
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/rule
+
+# Convenience name for target.
+projeto_02_generate_messages_py: projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/rule
+
+.PHONY : projeto_02_generate_messages_py
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_gennodejs.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_gennodejs.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gennodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_gennodejs.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gennodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_gennodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target projeto_02_gennodejs"
+.PHONY : projeto_02/CMakeFiles/projeto_02_gennodejs.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_gennodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_gennodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_gennodejs.dir/rule
+
+# Convenience name for target.
+projeto_02_gennodejs: projeto_02/CMakeFiles/projeto_02_gennodejs.dir/rule
+
+.PHONY : projeto_02_gennodejs
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_gennodejs.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gennodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_gennodejs.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_gennodejs.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# clean rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_genpy.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_genpy.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genpy.dir/build.make projeto_02/CMakeFiles/projeto_02_genpy.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genpy.dir/build.make projeto_02/CMakeFiles/projeto_02_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target projeto_02_genpy"
+.PHONY : projeto_02/CMakeFiles/projeto_02_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_genpy.dir/rule
+
+# Convenience name for target.
+projeto_02_genpy: projeto_02/CMakeFiles/projeto_02_genpy.dir/rule
+
+.PHONY : projeto_02_genpy
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_genpy.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genpy.dir/build.make projeto_02/CMakeFiles/projeto_02_genpy.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_genpy.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# clean rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all:
+	$(MAKE) -f projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/build.make projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/build.make projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target _projeto_02_generate_messages_check_deps_CameraRes"
+.PHONY : projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/rule
+
+# Convenience name for target.
+_projeto_02_generate_messages_check_deps_CameraRes: projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/rule
+
+.PHONY : _projeto_02_generate_messages_check_deps_CameraRes
+
+# clean rule for target.
+projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/build.make projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/clean
+.PHONY : projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# clean rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_gencpp.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_gencpp.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gencpp.dir/build.make projeto_02/CMakeFiles/projeto_02_gencpp.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gencpp.dir/build.make projeto_02/CMakeFiles/projeto_02_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target projeto_02_gencpp"
+.PHONY : projeto_02/CMakeFiles/projeto_02_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_gencpp.dir/rule
+
+# Convenience name for target.
+projeto_02_gencpp: projeto_02/CMakeFiles/projeto_02_gencpp.dir/rule
+
+.PHONY : projeto_02_gencpp
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_gencpp.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gencpp.dir/build.make projeto_02/CMakeFiles/projeto_02_gencpp.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_gencpp.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_generate_messages.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target projeto_02_generate_messages"
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages.dir/rule
+
+# Convenience name for target.
+projeto_02_generate_messages: projeto_02/CMakeFiles/projeto_02_generate_messages.dir/rule
+
+.PHONY : projeto_02_generate_messages
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/all: projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/all: projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num=13 "Built target projeto_02_generate_messages_nodejs"
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+projeto_02_generate_messages_nodejs: projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/rule
+
+.PHONY : projeto_02_generate_messages_nodejs
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# clean rule for target.
+projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/all: projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/all: projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num=10,11 "Built target projeto_02_generate_messages_eus"
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+projeto_02_generate_messages_eus: projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/rule
+
+.PHONY : projeto_02_generate_messages_eus
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/all: projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/all: projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num=9 "Built target projeto_02_generate_messages_cpp"
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+projeto_02_generate_messages_cpp: projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/rule
+
+.PHONY : projeto_02_generate_messages_cpp
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_geneus.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_geneus.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_geneus.dir/build.make projeto_02/CMakeFiles/projeto_02_geneus.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_geneus.dir/build.make projeto_02/CMakeFiles/projeto_02_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target projeto_02_geneus"
+.PHONY : projeto_02/CMakeFiles/projeto_02_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_geneus.dir/rule
+
+# Convenience name for target.
+projeto_02_geneus: projeto_02/CMakeFiles/projeto_02_geneus.dir/rule
+
+.PHONY : projeto_02_geneus
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_geneus.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_geneus.dir/build.make projeto_02/CMakeFiles/projeto_02_geneus.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_geneus.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/all: projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/all: projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num=12 "Built target projeto_02_generate_messages_lisp"
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+projeto_02_generate_messages_lisp: projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/rule
+
+.PHONY : projeto_02_generate_messages_lisp
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target projeto_02/CMakeFiles/projeto_02_genlisp.dir
+
+# All Build rule for target.
+projeto_02/CMakeFiles/projeto_02_genlisp.dir/all: projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/all
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genlisp.dir/build.make projeto_02/CMakeFiles/projeto_02_genlisp.dir/depend
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genlisp.dir/build.make projeto_02/CMakeFiles/projeto_02_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles --progress-num= "Built target projeto_02_genlisp"
+.PHONY : projeto_02/CMakeFiles/projeto_02_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+projeto_02/CMakeFiles/projeto_02_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02/CMakeFiles/projeto_02_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bctat/TIAGo-maze-2/maze_ws/build/CMakeFiles 0
+.PHONY : projeto_02/CMakeFiles/projeto_02_genlisp.dir/rule
+
+# Convenience name for target.
+projeto_02_genlisp: projeto_02/CMakeFiles/projeto_02_genlisp.dir/rule
+
+.PHONY : projeto_02_genlisp
+
+# clean rule for target.
+projeto_02/CMakeFiles/projeto_02_genlisp.dir/clean:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genlisp.dir/build.make projeto_02/CMakeFiles/projeto_02_genlisp.dir/clean
+.PHONY : projeto_02/CMakeFiles/projeto_02_genlisp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

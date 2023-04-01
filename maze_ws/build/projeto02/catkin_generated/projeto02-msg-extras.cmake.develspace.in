@@ -1,0 +1,2 @@
+set(projeto02_MESSAGE_FILES "")
+set(projeto02_SERVICE_FILES "/home/bctat/TIAGo-maze-2/maze_ws/src/projeto02/srv/CameraRes.srv")

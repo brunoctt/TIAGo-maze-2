@@ -284,6 +284,227 @@ gtest/fast:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+#=============================================================================
+# Target rules for targets named projeto_02_generate_messages_py
+
+# Build rule for target.
+projeto_02_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_generate_messages_py
+.PHONY : projeto_02_generate_messages_py
+
+# fast build rule for target.
+projeto_02_generate_messages_py/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_py.dir/build
+.PHONY : projeto_02_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_gennodejs
+
+# Build rule for target.
+projeto_02_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_gennodejs
+.PHONY : projeto_02_gennodejs
+
+# fast build rule for target.
+projeto_02_gennodejs/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gennodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_gennodejs.dir/build
+.PHONY : projeto_02_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_genpy
+
+# Build rule for target.
+projeto_02_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_genpy
+.PHONY : projeto_02_genpy
+
+# fast build rule for target.
+projeto_02_genpy/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genpy.dir/build.make projeto_02/CMakeFiles/projeto_02_genpy.dir/build
+.PHONY : projeto_02_genpy/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _projeto_02_generate_messages_check_deps_CameraRes
+
+# Build rule for target.
+_projeto_02_generate_messages_check_deps_CameraRes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _projeto_02_generate_messages_check_deps_CameraRes
+.PHONY : _projeto_02_generate_messages_check_deps_CameraRes
+
+# fast build rule for target.
+_projeto_02_generate_messages_check_deps_CameraRes/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/build.make projeto_02/CMakeFiles/_projeto_02_generate_messages_check_deps_CameraRes.dir/build
+.PHONY : _projeto_02_generate_messages_check_deps_CameraRes/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_gencpp
+
+# Build rule for target.
+projeto_02_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_gencpp
+.PHONY : projeto_02_gencpp
+
+# fast build rule for target.
+projeto_02_gencpp/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_gencpp.dir/build.make projeto_02/CMakeFiles/projeto_02_gencpp.dir/build
+.PHONY : projeto_02_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_generate_messages
+
+# Build rule for target.
+projeto_02_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_generate_messages
+.PHONY : projeto_02_generate_messages
+
+# fast build rule for target.
+projeto_02_generate_messages/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages.dir/build
+.PHONY : projeto_02_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_generate_messages_nodejs
+
+# Build rule for target.
+projeto_02_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_generate_messages_nodejs
+.PHONY : projeto_02_generate_messages_nodejs
+
+# fast build rule for target.
+projeto_02_generate_messages_nodejs/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_nodejs.dir/build
+.PHONY : projeto_02_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_generate_messages_eus
+
+# Build rule for target.
+projeto_02_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_generate_messages_eus
+.PHONY : projeto_02_generate_messages_eus
+
+# fast build rule for target.
+projeto_02_generate_messages_eus/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_eus.dir/build
+.PHONY : projeto_02_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_generate_messages_cpp
+
+# Build rule for target.
+projeto_02_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_generate_messages_cpp
+.PHONY : projeto_02_generate_messages_cpp
+
+# fast build rule for target.
+projeto_02_generate_messages_cpp/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_cpp.dir/build
+.PHONY : projeto_02_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_geneus
+
+# Build rule for target.
+projeto_02_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_geneus
+.PHONY : projeto_02_geneus
+
+# fast build rule for target.
+projeto_02_geneus/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_geneus.dir/build.make projeto_02/CMakeFiles/projeto_02_geneus.dir/build
+.PHONY : projeto_02_geneus/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_generate_messages_lisp
+
+# Build rule for target.
+projeto_02_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_generate_messages_lisp
+.PHONY : projeto_02_generate_messages_lisp
+
+# fast build rule for target.
+projeto_02_generate_messages_lisp/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/build.make projeto_02/CMakeFiles/projeto_02_generate_messages_lisp.dir/build
+.PHONY : projeto_02_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named projeto_02_genlisp
+
+# Build rule for target.
+projeto_02_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto_02_genlisp
+.PHONY : projeto_02_genlisp
+
+# fast build rule for target.
+projeto_02_genlisp/fast:
+	$(MAKE) -f projeto_02/CMakeFiles/projeto_02_genlisp.dir/build.make projeto_02/CMakeFiles/projeto_02_genlisp.dir/build
+.PHONY : projeto_02_genlisp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,6 +527,23 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... projeto_02_generate_messages_py"
+	@echo "... projeto_02_gennodejs"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... projeto_02_genpy"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... _projeto_02_generate_messages_check_deps_CameraRes"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... projeto_02_gencpp"
+	@echo "... projeto_02_generate_messages"
+	@echo "... projeto_02_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... projeto_02_generate_messages_eus"
+	@echo "... projeto_02_generate_messages_cpp"
+	@echo "... projeto_02_geneus"
+	@echo "... projeto_02_generate_messages_lisp"
+	@echo "... projeto_02_genlisp"
 .PHONY : help
 
 

@@ -1,0 +1,8 @@
+prefix=/home/bctat/TIAGo-maze-2/maze_ws/install
+
+Name: projeto02
+Description: Description of projeto02
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
