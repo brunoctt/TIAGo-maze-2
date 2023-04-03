@@ -30,7 +30,7 @@ class myRobot():
         self.orientation = None
         self.pub_head = rospy.Publisher('/head_controller/command', JointTrajectory, queue_size=1)
         # Executando laço 10000 vezes por segundo
-        self.rate = rospy.Rate(10000)
+        self.rate = rospy.Rate(20000)
 
     def waving_hand(self):
         # Cria um objeto de ação de controle do braço do TIAGo
@@ -93,11 +93,11 @@ class myRobot():
         print('move straight')
         move = Twist()
         k_linear = 2
-        k_angular = 0.6
+        k_angular = 1
         dist = 1
         while self.straight - dist > 0.005:
             move.linear.x = k_linear * (self.straight - dist)
-            if abs(self.right - self.left) < 0.3:
+            if abs(self.right - self.left) < 0.4:
                 move.angular.z = k_angular * (self.left - self.right)
             else:
                 move.angular.z = 0
@@ -110,9 +110,10 @@ class myRobot():
             pass
         initial_ori = self.orientation
         move = Twist()
+        k = 2
         diff = min(abs(self.orientation - initial_ori), (self.orientation - initial_ori)%pi)
-        while diff < pi/2 - 0.03:
-            move.angular.z = (abs(angle) - diff) * (angle//abs(angle))
+        while diff < pi/2 - 0.1:
+            move.angular.z = k * (abs(angle) - diff) * (angle//abs(angle))
             self.base_pub.publish(move)
             diff = min(abs(self.orientation - initial_ori), (self.orientation - initial_ori)%pi)
         
@@ -133,7 +134,7 @@ class myRobot():
         print(self.left)
         print(self.straight)
         print(self.right)
-        if (self.right < self.distance and self.left < self.distance) or self.straight > 1.2:
+        if (self.right < self.distance and self.left < self.distance):
             return 2  # Andar pra frente
         elif self.right >= self.distance and self.left >= self.distance:
             return 1  # Tirar fotos
@@ -150,7 +151,7 @@ class myRobot():
         
         move = Twist()
         k_linear = 2
-        dist = 0.7
+        dist = 0.6
         while self.straight - dist > 0.005:
             move.linear.x = k_linear * (self.straight - dist)
             self.base_pub.publish(move)
@@ -232,7 +233,7 @@ class myRobot():
             self.pub_head.publish(cmd)
             angle -= pi/16
             self.rate.sleep()
-
+            
 if __name__ == '__main__':
 
     rospy.init_node('maze_runner')

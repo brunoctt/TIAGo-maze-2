@@ -56,11 +56,7 @@ class myCamera():
             self.cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
         except CvBridgeError as e:
             print(e)
-
-        # cv_image[linha][coluna][bgr] bgr-> 0:blue, 1:green, 2:red
-        # print(self.cv_image[0][0])
-        # print(self.cv_image[0][0][0])
-
+            
 
 if __name__ == '__main__':
 
