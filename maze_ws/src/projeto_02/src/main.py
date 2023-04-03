@@ -1,7 +1,7 @@
 #! /usr/bin/python
 
-import actionlib
 import rospy
+import actionlib
 from time import sleep
 from numpy import mean
 from math import ceil, pi
@@ -10,9 +10,9 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 from tf.transformations import euler_from_quaternion
 from projeto_02.srv import CameraRes, CameraResResponse
+from trajectory_msgs.msg import JointTrajectory,JointTrajectoryPoint
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal
-from trajectory_msgs.msg import JointTrajectory,JointTrajectoryPoint
 
 class myRobot():
 
@@ -22,14 +22,15 @@ class myRobot():
         print('init')
         self.sub_od = rospy.Subscriber('/mobile_base_controller/odom', Odometry, self.callback_odometria, queue_size=1)
         self.sub_laser = rospy.Subscriber('/scan_raw', LaserScan, self.callback_laser, queue_size=1)
+        self.pub_head = rospy.Publisher('/head_controller/command', JointTrajectory, queue_size=1)
+        self.base_pub = rospy.Publisher('/nav_vel', Twist, queue_size=1)
+        
         self.laser_ranges = None
         self.right = self.left = self.straight = None
         self.n_laser = None
-        # Client Service camera
-        self.base_pub = rospy.Publisher('/nav_vel', Twist, queue_size=1)
         self.orientation = None
-        self.pub_head = rospy.Publisher('/head_controller/command', JointTrajectory, queue_size=1)
-        # Executando laço 10000 vezes por segundo
+        
+        # Executando laço 20000 vezes por segundo
         self.rate = rospy.Rate(20000)
 
     def waving_hand(self):
@@ -73,13 +74,11 @@ class myRobot():
         arm_client.wait_for_result()
     
     def callback_odometria(self, msg: Odometry):
-        # print('callback odometria')
         # Armazenar os dados de odometria
         q = msg.pose.pose.orientation
         self.orientation = round(euler_from_quaternion([q.x, q.y, q.z, q.w])[-1], 2)
 
     def callback_laser(self, msg: LaserScan):
-        # print('callback laser')
         # Armazenar os dados do laser
         self.laser_ranges = [x if x > 0.1 else float('inf') for x in msg.ranges]
         self.n_laser = ceil((msg.angle_max - msg.angle_min) / msg.angle_increment + 1)
@@ -87,7 +86,6 @@ class myRobot():
         self.right = mean(sorted(self.laser_ranges[:side])[:50])
         self.straight = mean(sorted(self.laser_ranges[side:-side])[:50])
         self.left = mean(sorted(self.laser_ranges[-side:])[:50])
-        # print(self.laser_ranges)
 
     def move_straight(self):
         print('move straight')
@@ -128,12 +126,6 @@ class myRobot():
         if self.n_laser is None:
             return 0
         
-        side = self.n_laser // 3
-        
-        print('-'*30)
-        print(self.left)
-        print(self.straight)
-        print(self.right)
         if (self.right < self.distance and self.left < self.distance):
             return 2  # Andar pra frente
         elif self.right >= self.distance and self.left >= self.distance:
@@ -146,6 +138,7 @@ class myRobot():
             return 0
          
     def image_processing(self):
+        print("image processing")
         # Virar a cabeca
         state = self.move_head()
         
@@ -205,8 +198,6 @@ class myRobot():
         left = self.take_picture()
         self.rot_head_right(cmd)
         right = self.take_picture()
-        # print(f"Left: {left}")
-        # print(f"Right: {right}")
         if left == 0:
             return 3  # turn_left
         elif right == 0:
@@ -239,27 +230,21 @@ if __name__ == '__main__':
     rospy.init_node('maze_runner')
 
     tiago = myRobot()
-    # sleep(5)
+    sleep(5)
     stop = False
     state = 0
     while (not rospy.is_shutdown()) and state != 5:
         prev = state
         if state == 0:
             pass
-            #compute next state
         elif state == 1:
             stop = tiago.image_processing()
-            #compute next state
         elif state == 2:
             tiago.move_straight()
-            #compute next state
         elif state == 3:
             tiago.turn_left()
-            #compute next state
         elif state == 4:
             tiago.turn_right()
-            #compute next state
-        
         
         state = tiago.decision()
         if stop:
