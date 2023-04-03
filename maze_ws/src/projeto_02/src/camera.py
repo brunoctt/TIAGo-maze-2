@@ -22,7 +22,7 @@ class myCamera():
         
     def callback_ServiceCamera(self, request):
         # print('image service')
-        sleep(1)
+        sleep(2)
         
         # Extract the color layers
         blue = self.cv_image[:,:,0]
